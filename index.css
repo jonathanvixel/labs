@@ -47,7 +47,7 @@ body {
     font-family: 'Gill Sans', sans-serif; /* Modern font family */
     font-size: 33px; /* Adjust font size */
     font-weight: normal; /* Make the font bold */
-    color: #333; /* Dark gray text color */
+    color: #000000; /* Dark gray text color */
     text-align: center;
     white-space: nowrap; /* Prevent text from wrapping */
 }

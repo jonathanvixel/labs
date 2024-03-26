@@ -138,11 +138,11 @@ body {
 
 .textbox {
     width: 100%; /* Set width to 100% */
-    max-width: 1800px; /* Set a maximum width */
+    max-width: 2500px; /* Set a maximum width */
     margin: 0 auto; /* Center the box horizontally */
     background-color: #ffffff;
-    padding: 200px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+    padding: 230px; /* Reduce padding for smaller screens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
 }
 
 .textbox h2,
@@ -161,6 +161,37 @@ body {
     color: #373737;
     line-height: 1.6;
 }
+
+/* Media query for screens smaller than 768px (tablets and below) */
+@media (max-width: 768px) {
+    .textbox {
+        padding: 30px; /* Adjust padding for smaller screens */
+    }
+
+    .textbox h2 {
+        font-size: 22px; /* Adjust heading font size */
+    }
+
+    .textbox p {
+        font-size: 18px; /* Adjust paragraph font size */
+    }
+}
+
+/* Media query for screens smaller than 480px (phones) */
+@media (max-width: 480px) {
+    .textbox {
+        padding: 20px; /* Further reduce padding for smaller screens */
+    }
+
+    .textbox h2 {
+        font-size: 20px; /* Further adjust heading font size */
+    }
+
+    .textbox p {
+        font-size: 16px; /* Further adjust paragraph font size */
+    }
+}
+
 
 footer {
     background-color: rgba(255, 255, 255, 0.9);
@@ -198,4 +229,3 @@ footer a:hover {
 .spacer {
     height: 50px;
 }
-

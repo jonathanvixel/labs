@@ -7,8 +7,9 @@
   <link rel="icon" href="mainlogo.png" type="image/png">
   <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-<nav class="navbar">
+  <nav class="navbar">
     <div class="container">
         <a href="index.html">
             <img src="mainlogo.png" class="logo" alt="Logo">
@@ -23,11 +24,7 @@
             <a href="contact.html" class="text">Contact</a>
         </div>
     </div>
-</nav>
-
-
-
-
+  </nav>
 
   <div class="content">
     <div class="full-screen-image" style="background-image: url('newblur.jpg');">
@@ -44,7 +41,7 @@
         <div class="spacer"></div> <!-- Added spacer -->
 
         <p>
-          Experience the frontier of innovation with Vixel Corp. Labs, where revolutionary technology elevates the ordinary to extraordinary heights, redefining daily routines for unparalleled ease and efficiency. Our advanced solutions seamlessly integrate into your life, from intuitive home automation that anticipates your needs to streamlined connectivity that keeps you effortlessly in sync with your surroundings. Imagine waking up to a home that adjusts to your preferences with lights and appliances responding to your commands, simplifying your morning routine with grace and efficiency. With our unwavering commitment to pushing the boundaries of what's possible, we ensure that our products not only meet but exceed your expectations, providing you with the tools to embrace a simpler, smarter lifestyle. </p>
+          Step into a realm of innovation with Vixel Corp. Labs groundbreaking technology, where the ordinary is transformed into the extraordinary, and daily routines are redefined for unparalleled ease. Our advanced solutions seamlessly integrate into your life, from intuitive home automation that anticipates your needs to streamlined connectivity that keeps you effortlessly in sync with your surroundings. Imagine waking up to a home that adjusts to your preferences with lights and appliances responding to your commands, simplifying your morning routine with grace and efficiency. With our unwavering commitment to pushing the boundaries of what's possible, we ensure that our products not only meet but exceed your expectations, providing you with the tools to embrace a simpler, smarter lifestyle. </p>
       </div>
     </div>
     <div class="spacer"></div> <!-- Added spacer -->
@@ -56,6 +53,21 @@
       <p>&copy; 2024 Vixel Corp. Labs. All rights reserved. Property of the Vixel Corporation. <span class="separator"> | </span> <a href="aboutus.html">About Us</a></p>
     </div>
   </footer>
-  <script src="home.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.getElementById('toggle');
+        const menuItems = document.querySelector('.menu-items');
+
+        toggle.addEventListener('click', function() {
+            menuItems.classList.toggle('active');
+        });
+
+        // Add touch event listener for mobile devices
+        toggle.addEventListener('touchstart', function() {
+            menuItems.classList.toggle('active');
+        });
+    });
+  </script>
 </body>
 </html>

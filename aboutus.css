@@ -6,7 +6,7 @@ body {
 
 .navbar {
     background-color: rgba(246, 246, 246, 0.744);
-    padding: 6px 5%; /* Adjust padding as needed */
+    padding: 6px 5%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
     position: sticky;
     top: 0;
@@ -17,14 +17,14 @@ body {
     -webkit-backdrop-filter: blur(20px);
     opacity: 1;
     transition: top 0.3s;
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    box-sizing: border-box;
 }
-
 
 .navbar .container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 5%;
 }
 
 .logo {
@@ -32,15 +32,74 @@ body {
     height: auto;
 }
 
+.menu-toggle {
+    display: none;
+}
+
+.menu-items {
+    display: flex;
+    gap: 20px; /* Adjust the gap between menu items */
+}
+
 .text {
     font-family: 'Gill Sans', sans-serif;
     font-size: 14px;
     font-weight: normal;
     color: #333333;
-    margin: 0 155px; /* Adjust margins to move both texts away from the logo */
-    display: flex;
-    align-items: center;
+    padding: 0 210px; /* Adjusted padding */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     text-decoration: none;
+}
+
+/* Burger menu icon */
+.menu-toggle .burger {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Mobile View */
+@media (max-width: 1024px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgba(246, 246, 246, 0.744);
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
+    }
+
+    .menu-toggle.active + .menu-items {
+        display: flex;
+    }
+
+    .menu-toggle.active .burger {
+        transform: rotate(90deg); /* Rotate the burger icon */
+    }
+
+    /* Adjusted padding for iPad */
+    .text {
+        padding: 0 210px;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 1025px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu-items {
+        display: flex;
+    }
 }
 
 
@@ -75,6 +134,36 @@ body {
     font-size: 20px;
     color: #373737;
     line-height: 1.6;
+}
+
+/* Media query for screens smaller than 768px (tablets and below) */
+@media (max-width: 768px) {
+    .textbox {
+        padding: 150px; /* Adjust padding for smaller screens */
+    }
+
+    .textbox h2 {
+        font-size: 22px; /* Adjust heading font size */
+    }
+
+    .textbox p {
+        font-size: 18px; /* Adjust paragraph font size */
+    }
+}
+
+/* Media query for screens smaller than 480px (phones) */
+@media (max-width: 480px) {
+    .textbox {
+        padding: 100px; /* Further reduce padding for smaller screens */
+    }
+
+    .textbox h2 {
+        font-size: 20px; /* Further adjust heading font size */
+    }
+
+    .textbox p {
+        font-size: 16px; /* Further adjust paragraph font size */
+    }
 }
 
 footer {

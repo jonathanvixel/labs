@@ -60,7 +60,7 @@ body {
 }
 
 /* Mobile View */
-@media (max-width: 700px) {
+@media (max-width: 1024px) {
     .menu-toggle {
         display: block;
     }
@@ -84,10 +84,15 @@ body {
     .menu-toggle.active .burger {
         transform: rotate(90deg); /* Rotate the burger icon */
     }
+
+    /* Adjusted padding for iPad */
+    .text {
+        padding: 0 210px;
+    }
 }
 
 /* Desktop View */
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
     .menu-toggle {
         display: none;
     }
@@ -96,6 +101,7 @@ body {
         display: flex;
     }
 }
+
 
 .content {
     display: flex;

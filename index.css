@@ -55,10 +55,8 @@ body {
 
 /* Burger menu icon */
 .menu-toggle .burger {
-    width: 24px;
-    height: 2px;
-    background-color: #333;
-    margin: 4px 0;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 /* Mobile View */
@@ -94,7 +92,6 @@ body {
         display: flex;
     }
 }
-
 
 .content {
     display: flex;

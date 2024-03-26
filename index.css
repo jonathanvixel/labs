@@ -1,0 +1,199 @@
+body {
+    background-color: #f5f5f5; 
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background-color: rgba(246, 246, 246, 0.744);
+    padding: 6px 5%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    opacity: 1;
+    transition: top 0.3s;
+    box-sizing: border-box;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.logo {
+    width: 24px;
+    height: auto;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-items {
+    display: flex;
+    gap: 20px; /* Adjust the gap between menu items */
+}
+
+.text {
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: #333333;
+    padding: 0 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+}
+
+/* Burger menu icon */
+.menu-toggle .burger {
+    width: 24px;
+    height: 2px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgba(246, 246, 246, 0.744);
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
+    }
+
+    #toggle:checked + .menu-items {
+        display: flex;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu-items {
+        display: flex;
+    }
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-top: 60px;
+}
+
+.full-screen-image {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.image-text {
+    text-align: center;
+    position: absolute;
+    color: #ffffff;
+}
+
+.image-text h2 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.image-text p {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 18px;
+}
+
+.textbox-container {
+    display: flex;
+    justify-content: center;
+}
+
+.textbox {
+    width: 100%; /* Set width to 100% */
+    max-width: 1800px; /* Set a maximum width */
+    margin: 0 auto; /* Center the box horizontally */
+    background-color: #ffffff;
+    padding: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+}
+
+.textbox h2,
+.textbox p {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.textbox h2 {
+    font-size: 25px;
+    color: #333333;
+    text-align: center;
+}
+
+.textbox p {
+    font-size: 20px;
+    color: #373737;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #666666;
+    padding: 40px 2%; /* Adjust padding as needed */
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: -100px;
+    z-index: 1;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 15px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+
+footer .footer-content {
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    color: #666666;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.separator {
+    margin: 0 5px;
+}
+
+.spacer {
+    height: 50px;
+}

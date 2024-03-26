@@ -80,6 +80,10 @@ body {
     .menu-toggle.active + .menu-items {
         display: flex;
     }
+
+    .menu-toggle.active .burger {
+        transform: rotate(90deg); /* Rotate the burger icon */
+    }
 }
 
 /* Desktop View */
@@ -194,3 +198,4 @@ footer a:hover {
 .spacer {
     height: 50px;
 }
+

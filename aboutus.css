@@ -154,7 +154,7 @@ body {
 /* Media query for screens smaller than 480px (phones) */
 @media (max-width: 480px) {
     .textbox {
-        padding: 100px; /* Further reduce padding for smaller screens */
+        padding: 20px; /* Further reduce padding for smaller screens */
     }
 
     .textbox h2 {

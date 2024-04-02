@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,18 +12,18 @@
 <body>
   <nav class="navbar">
     <div class="container">
-        <a href="index.html">
-            <img src="mainlogo.png" class="logo" alt="Logo">
-        </a>
-        <div class="menu-toggle" id="toggle">
-            <div class="burger">&#9776;</div> <!-- Burger menu icon -->
-        </div>
-        <div class="menu-items">
-            <a href="technology.html" class="text">Technology</a>
-            <a href="connections.html" class="text">Connections</a>
-            <a href="goals.html" class="text">Goals</a>
-            <a href="contact.html" class="text">Contact</a>
-        </div>
+      <a href="/home"> <!-- Changed index.html to /home -->
+        <img src="mainlogo.png" class="logo" alt="Logo">
+      </a>
+      <div class="menu-toggle" id="toggle">
+        <div class="burger">&#9776;</div> <!-- Burger menu icon -->
+      </div>
+      <div class="menu-items">
+        <a href="/technology" class="text">Technology</a> <!-- Removed .html extension -->
+        <a href="/connections" class="text">Connections</a> <!-- Removed .html extension -->
+        <a href="/goals" class="text">Goals</a> <!-- Removed .html extension -->
+        <a href="/contact" class="text">Contact</a> <!-- Removed .html extension -->
+      </div>
     </div>
   </nav>
 
@@ -50,24 +51,25 @@
 
   <footer>
     <div class="footer-content">
-      <p>&copy; 2024 Vixel Corp. Labs. All rights reserved. Property of the Vixel Corporation. <span class="separator"> | </span> <a href="aboutus.html">About Us</a></p>
+      <p>&copy; 2024 Vixel Corp. Labs. All rights reserved. Property of the Vixel Corporation. <span class="separator"> | </span> <a href="/aboutus">About Us</a></p> <!-- Removed .html extension -->
     </div>
   </footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const toggle = document.getElementById('toggle');
-        const menuItems = document.querySelector('.menu-items');
+      const toggle = document.getElementById('toggle');
+      const menuItems = document.querySelector('.menu-items');
 
-        toggle.addEventListener('click', function() {
-            menuItems.classList.toggle('active');
-        });
+      toggle.addEventListener('click', function() {
+        menuItems.classList.toggle('active');
+      });
 
-        // Add touch event listener for mobile devices
-        toggle.addEventListener('touchstart', function() {
-            menuItems.classList.toggle('active');
-        });
+      // Add touch event listener for mobile devices
+      toggle.addEventListener('touchstart', function() {
+        menuItems.classList.toggle('active');
+      });
     });
   </script>
 </body>
+
 </html>

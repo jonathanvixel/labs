@@ -19,10 +19,10 @@
         <div class="burger">&#9776;</div> <!-- Burger menu icon -->
       </div>
       <div class="menu-items">
-        <a href="#" class="text">Technology</a>
-        <a href="#" class="text">Connections</a>
-        <a href="#" class="text">Goals</a>
-        <a href="#" class="text">Contact</a>
+        <a href="/technology" class="text">Technology</a>
+        <a href="/connections" class="text">Connections</a>
+        <a href="/goals" class="text">Goals</a>
+        <a href="/contact" class="text">Contact</a>
         <div class="exit-btn" id="exit-btn">X</div> <!-- Exit button -->
       </div>
     </div>
@@ -77,10 +77,18 @@
         toggle.classList.toggle('active');
         menuItems.classList.toggle('active');
       });
+
+      // Close menu when a menu item is clicked
+      const menuLinks = document.querySelectorAll('.menu-items .text');
+      menuLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          toggle.classList.remove('active');
+          menuItems.classList.remove('active');
+        });
+      });
     });
   </script>
 </body>
 
 </html>
-
 

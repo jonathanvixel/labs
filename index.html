@@ -19,10 +19,11 @@
         <div class="burger">&#9776;</div> <!-- Burger menu icon -->
       </div>
       <div class="menu-items">
-        <a href="/technology" class="text">Technology</a>
-        <a href="/connections" class="text">Connections</a>
-        <a href="/goals" class="text">Goals</a>
-        <a href="/contact" class="text">Contact</a>
+        <a href="#" class="text">Technology</a>
+        <a href="#" class="text">Connections</a>
+        <a href="#" class="text">Goals</a>
+        <a href="#" class="text">Contact</a>
+        <div class="exit-btn" id="exit-btn">X</div> <!-- Exit button -->
       </div>
     </div>
   </nav>
@@ -59,10 +60,16 @@
     document.addEventListener('DOMContentLoaded', function() {
       const toggle = document.getElementById('toggle');
       const menuItems = document.querySelector('.menu-items');
+      const exitBtn = document.getElementById('exit-btn');
 
       toggle.addEventListener('click', function() {
         toggle.classList.toggle('active');
         menuItems.classList.toggle('active');
+      });
+
+      exitBtn.addEventListener('click', function() {
+        toggle.classList.remove('active');
+        menuItems.classList.remove('active');
       });
 
       // Add touch event listener for mobile devices
@@ -75,4 +82,5 @@
 </body>
 
 </html>
+
 

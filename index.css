@@ -33,7 +33,9 @@ body {
 }
 
 .menu-toggle {
-    display: none;
+    display: block; /* Ensure the burger menu is visible on mobile */
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .menu-items {
@@ -56,11 +58,6 @@ body {
 
 .menu-toggle.active .burger {
     transform: rotate(90deg);
-}
-
-.menu-toggle .burger {
-    font-size: 24px;
-    cursor: pointer;
 }
 
 .text {

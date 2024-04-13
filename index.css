@@ -33,7 +33,7 @@ body {
 }
 
 .menu-toggle {
-    display: none; /* Hide the burger menu by default */
+    display: none;
 }
 
 .menu-items {
@@ -53,9 +53,6 @@ body {
     text-decoration: none;
 }
 
-.text:hover {
-    font-weight: bold; /* Highlight on hover */
-}
 
 /* Media query for screens smaller than 1024px (tablets and below) */
 @media (max-width: 1024px) {

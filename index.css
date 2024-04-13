@@ -33,23 +33,23 @@ body {
 }
 
 .menu-toggle {
-    display: none; /* Hide the menu toggle by default */
+    display: block; /* Ensure the burger menu is visible on mobile */
     font-size: 24px;
     cursor: pointer;
 }
 
 .menu-items {
-    display: flex;
+    display: none;
     flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: fixed; /* Change position to fixed */
+    top: 0; /* Cover the entire viewport from the top */
+    left: 0; /* Cover the entire viewport from the left */
     background-color: rgba(246, 246, 246, 0.744);
-    width: 100%;
-    height: 100%;
+    width: 100%; /* Cover the entire width of the viewport */
+    height: 100%; /* Cover the entire height of the viewport */
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
-    z-index: 1001;
+    z-index: 1001; /* Ensure menu is above navbar */
 }
 
 .menu-toggle.active + .menu-items {
@@ -69,7 +69,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     text-decoration: none;
-    padding: 0;
+    padding: 0; /* Remove padding for full-page menu */
 }
 
 .content {
@@ -112,12 +112,12 @@ body {
 }
 
 .textbox {
-    width: 100%;
-    max-width: 2500px;
-    margin: 0 auto;
+    width: 100%; /* Set width to 100% */
+    max-width: 2500px; /* Set a maximum width */
+    margin: 0 auto; /* Center the box horizontally */
     background-color: #ffffff;
-    padding: 230px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 230px; /* Reduce padding for smaller screens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
 }
 
 .textbox h2,
@@ -138,10 +138,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Show the menu toggle only for smaller screens */
-    }
-
     .textbox {
         padding: 10px; /* Adjust padding for smaller screens */
     }
@@ -172,7 +168,7 @@ body {
 footer {
     background-color: rgba(255, 255, 255, 0.9);
     color: #666666;
-    padding: 40px 2%;
+    padding: 40px 2%; /* Adjust padding as needed */
     text-align: center;
     width: 100%;
     position: relative;
@@ -180,7 +176,7 @@ footer {
     z-index: 1;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 15px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 footer .footer-content {
@@ -204,4 +200,3 @@ footer a:hover {
 .spacer {
     height: 50px;
 }
-

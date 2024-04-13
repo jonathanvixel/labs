@@ -32,10 +32,6 @@ body {
     height: auto;
 }
 
-.menu-toggle {
-    display: none; /* Hide the burger menu by default */
-}
-
 .menu-items {
     display: flex;
     gap: 20px; /* Adjust the gap between menu items */
@@ -46,60 +42,14 @@ body {
     font-size: 14px;
     font-weight: normal;
     color: #333333;
-    padding: 0 20px; /* Adjusted padding */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     text-decoration: none;
 }
 
-/* Burger menu icon */
-.menu-toggle .burger {
-    font-size: 24px;
-    cursor: pointer;
-}
-
-/* Mobile View */
-@media (max-width: 1024px) {
-    .menu-toggle {
-        display: block; /* Display burger menu for mobile */
-    }
-
-    .menu-items {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: rgba(246, 246, 246, 0.744);
-        width: 100%;
-        padding: 10px 0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
-    }
-
-    .menu-toggle.active + .menu-items {
-        display: flex;
-    }
-
-    .menu-toggle.active .burger {
-        transform: rotate(90deg); /* Rotate the burger icon */
-    }
-
-    /* Adjusted padding for mobile */
-    .text {
-        padding: 10px 20px;
-    }
-}
-
-/* Desktop View */
-@media (min-width: 1025px) {
-    .menu-toggle {
-        display: none; /* Hide burger menu on desktop */
-    }
-
-    .menu-items {
-        display: flex;
-    }
+.text:hover {
+    font-weight: bold; /* Highlight on hover */
 }
 
 .content {
@@ -232,4 +182,3 @@ footer a:hover {
 .spacer {
     height: 50px;
 }
-

@@ -1,202 +1,77 @@
-body {
-    background-color: #f5f5f5; 
-    margin: 0;
-    scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-.navbar {
-    background-color: rgba(246, 246, 246, 0.744);
-    padding: 6px 5%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    opacity: 1;
-    transition: top 0.3s;
-    box-sizing: border-box;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vixel Corp.</title>
+  <link rel="icon" href="vixelicon.png" type="image/png">
+  <link rel="stylesheet" href="index.css">
+</head>
 
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5%;
-}
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="/">
+        <img src="vixelicon.png" class="logo" alt="Logo">
+      </a>
+      <div class="menu-toggle" id="toggle">
+        <div class="burger">&#9776;</div> <!-- Burger menu icon -->
+      </div>
+      <div class="menu-items">
+        <a href="/technology" class="text">Technology</a>
+        <a href="/connections" class="text">Connections</a>
+        <a href="/goals" class="text">Goals</a>
+        <a href="/contact" class="text">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-.logo {
-    width: 25px;
-    height: auto;
-}
+  <div class="content">
+    <div class="full-screen-image" style="background-image: url('newblur.jpg');">
+      <div class="image-text">
+        <h2>Building Tomorrow's Realities Today</h2>
+        <p>Vixel Corp.</p>
+      </div>
+    </div>
+    <div class="spacer"></div> <!-- Added spacer -->
+    <div class="full-screen-image" style="background-image: url('black.jpg');"></div>
+    <div class="textbox-container"> <!-- Created a container for textbox -->
+      <div class="textbox">
+        <h2>Future Technologies</h2>
+        <div class="spacer"></div> <!-- Added spacer -->
 
-.menu-toggle {
-    display: block; /* Ensure the burger menu is visible on mobile */
-    font-size: 24px;
-    cursor: pointer;
-}
+        <p>
+          Step into a realm of innovation with Vixel Corp. with groundbreaking technology, where the ordinary is transformed into the extraordinary, and daily routines are redefined for unparalleled ease. Our advanced solutions seamlessly integrate into your life, from intuitive home automation that anticipates your needs to streamlined connectivity that keeps you effortlessly in sync with your surroundings. Imagine waking up to a home that adjusts to your preferences with lights and appliances responding to your commands, simplifying your morning routine with grace and efficiency. With our unwavering commitment to pushing the boundaries of what's possible, we ensure that our products not only meet but exceed your expectations, providing you with the tools to embrace a simpler, smarter lifestyle. </p>
+      </div>
+    </div>
+    <div class="spacer"></div> <!-- Added spacer -->
+    <div class="full-screen-image" style="background-image: url('4k.jpg');"></div>
+  </div>
 
-.menu-items {
-    display: none;
-    flex-direction: column;
-    position: fixed; /* Change position to fixed */
-    top: 0; /* Cover the entire viewport from the top */
-    left: 0; /* Cover the entire viewport from the left */
-    background-color: rgba(246, 246, 246, 0.744);
-    width: 100%; /* Cover the entire width of the viewport */
-    height: 100%; /* Cover the entire height of the viewport */
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
-    z-index: 1001; /* Ensure menu is above navbar */
-}
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Vixel Corp. Labs. All rights reserved. Property of the Vixel Corporation. <span class="separator"> | </span> <a href="/aboutus">About Us</a></p>
+    </div>
+  </footer>
 
-.menu-toggle.active + .menu-items {
-    display: flex;
-}
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.getElementById('toggle');
+      const menuItems = document.querySelector('.menu-items');
 
-.menu-toggle.active .burger {
-    transform: rotate(90deg);
-}
+      toggle.addEventListener('click', function() {
+        toggle.classList.toggle('active');
+        menuItems.classList.toggle('active');
+      });
 
-.text {
-    font-family: 'Gill Sans', sans-serif;
-    font-size: 14px;
-    font-weight: normal;
-    color: #333333;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-decoration: none;
-    padding: 0; /* Remove padding for full-page menu */
-}
+      // Add touch event listener for mobile devices
+      toggle.addEventListener('touchstart', function() {
+        toggle.classList.toggle('active');
+        menuItems.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
 
-.content {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    padding-top: 60px;
-}
-
-.full-screen-image {
-    height: 60vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.image-text {
-    text-align: center;
-    position: absolute;
-    color: #ffffff;
-}
-
-.image-text h2 {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.image-text p {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 18px;
-}
-
-.textbox-container {
-    display: flex;
-    justify-content: center;
-}
-
-.textbox {
-    width: 100%; /* Set width to 100% */
-    max-width: 2500px; /* Set a maximum width */
-    margin: 0 auto; /* Center the box horizontally */
-    background-color: #ffffff;
-    padding: 230px; /* Reduce padding for smaller screens */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
-}
-
-.textbox h2,
-.textbox p {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-}
-
-.textbox h2 {
-    font-size: 25px;
-    color: #333333;
-    text-align: center;
-}
-
-.textbox p {
-    font-size: 20px;
-    color: #373737;
-    line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-    .textbox {
-        padding: 10px; /* Adjust padding for smaller screens */
-    }
-
-    .textbox h2 {
-        font-size: 22px; /* Adjust heading font size */
-    }
-
-    .textbox p {
-        font-size: 18px; /* Adjust paragraph font size */
-    }
-}
-
-@media (max-width: 480px) {
-    .textbox {
-        padding: 20px; /* Further reduce padding for smaller screens */
-    }
-
-    .textbox h2 {
-        font-size: 20px; /* Further adjust heading font size */
-    }
-
-    .textbox p {
-        font-size: 16px; /* Further adjust paragraph font size */
-    }
-}
-
-footer {
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #666666;
-    padding: 40px 2%; /* Adjust padding as needed */
-    text-align: center;
-    width: 100%;
-    position: relative;
-    bottom: -100px;
-    z-index: 1;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 15px;
-    box-sizing: border-box; /* Ensure padding is included in the width */
-}
-
-footer .footer-content {
-    display: flex;
-    justify-content: center;
-}
-
-footer a {
-    color: #666666;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-.separator {
-    margin: 0 5px;
-}
-
-.spacer {
-    height: 50px;
-}
+</html>

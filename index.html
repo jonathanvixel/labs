@@ -60,18 +60,29 @@
       const toggle = document.getElementById('toggle');
       const menuItems = document.querySelector('.menu-items');
 
-      toggle.addEventListener('click', function() {
+      toggle.addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevents the click event from propagating to the document
         toggle.classList.toggle('active');
         menuItems.classList.toggle('active');
       });
 
       // Add touch event listener for mobile devices
-      toggle.addEventListener('touchstart', function() {
+      toggle.addEventListener('touchstart', function(event) {
+        event.preventDefault(); // Prevents default touch behavior
         toggle.classList.toggle('active');
         menuItems.classList.toggle('active');
+      });
+
+      // Close menu when clicking outside of it
+      document.addEventListener('click', function(event) {
+        if (!menuItems.contains(event.target) && !toggle.contains(event.target)) {
+          toggle.classList.remove('active');
+          menuItems.classList.remove('active');
+        }
       });
     });
   </script>
 </body>
 
 </html>
+

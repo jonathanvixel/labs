@@ -32,6 +32,10 @@ body {
     height: auto;
 }
 
+.menu-toggle {
+    display: none; /* Hide the burger menu by default */
+}
+
 .menu-items {
     display: flex;
     gap: 20px; /* Adjust the gap between menu items */
@@ -42,6 +46,7 @@ body {
     font-size: 14px;
     font-weight: normal;
     color: #333333;
+    padding: 0 210px; /* Adjusted padding */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -50,6 +55,49 @@ body {
 
 .text:hover {
     font-weight: bold; /* Highlight on hover */
+}
+
+/* Media query for screens smaller than 1024px (tablets and below) */
+@media (max-width: 1024px) {
+    .menu-toggle {
+        display: block; /* Display burger menu for mobile */
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgba(246, 246, 246, 0.744);
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
+    }
+
+    .menu-toggle.active + .menu-items {
+        display: flex;
+    }
+
+    .menu-toggle.active .burger {
+        transform: rotate(90deg); /* Rotate the burger icon */
+    }
+
+    /* Adjusted padding for mobile */
+    .text {
+        padding: 0 20px;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 1025px) {
+    .menu-toggle {
+        display: none; /* Hide burger menu on desktop */
+    }
+
+    .menu-items {
+        display: flex;
+    }
 }
 
 .content {

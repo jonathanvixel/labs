@@ -62,14 +62,23 @@ body {
 
 .text {
     font-family: 'Gill Sans', sans-serif;
-    font-size: 14px;
-    font-weight: normal;
+    font-size: 18px; /* Larger font size */
+    font-weight: bold; /* Bold font */
     color: #333333;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     text-decoration: none;
-    padding: 0; /* Remove padding for full-page menu */
+    padding: 10px; /* Added padding */
+    text-align: center; /* Center alignment */
+}
+
+.exit-btn {
+    font-size: 24px; /* Larger font size */
+    color: #333333;
+    cursor: pointer;
+    align-self: flex-end; /* Align to the right */
+    padding: 10px; /* Added padding */
 }
 
 .content {
@@ -200,3 +209,4 @@ footer a:hover {
 .spacer {
     height: 50px;
 }
+

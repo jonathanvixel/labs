@@ -33,9 +33,7 @@ body {
 }
 
 .menu-toggle {
-    display: block; /* Ensure the burger menu is visible on mobile */
-    font-size: 24px;
-    cursor: pointer;
+    display: none; /* Hide the burger menu on desktop */
 }
 
 .menu-items {
@@ -69,7 +67,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     text-decoration: none;
-    padding: 10px; /* Added padding */
+    padding: 20px; /* Added padding */
     text-align: center; /* Center alignment */
 }
 
@@ -78,7 +76,7 @@ body {
     color: #333333;
     cursor: pointer;
     align-self: flex-end; /* Align to the right */
-    padding: 10px; /* Added padding */
+    padding: 20px; /* Added padding */
 }
 
 .content {

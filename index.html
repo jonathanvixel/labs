@@ -61,13 +61,11 @@
       const menuItems = document.querySelector('.menu-items');
 
       toggle.addEventListener('click', function() {
-        toggle.classList.toggle('active');
         menuItems.classList.toggle('active');
       });
 
       // Add touch event listener for mobile devices
       toggle.addEventListener('touchstart', function() {
-        toggle.classList.toggle('active');
         menuItems.classList.toggle('active');
       });
     });

@@ -33,12 +33,31 @@ body {
 }
 
 .menu-toggle {
-    display: none;
+    display: block; /* Ensure the burger menu is visible on mobile */
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .menu-items {
+    display: none;
+    flex-direction: column;
+    position: fixed; /* Change position to fixed */
+    top: 0; /* Cover the entire viewport from the top */
+    left: 0; /* Cover the entire viewport from the left */
+    background-color: rgba(246, 246, 246, 0.744);
+    width: 100%; /* Cover the entire width of the viewport */
+    height: 100%; /* Cover the entire height of the viewport */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
+    z-index: 1001; /* Ensure menu is above navbar */
+}
+
+.menu-toggle.active + .menu-items {
     display: flex;
-    gap: 20px; /* Adjust the gap between menu items */
+}
+
+.menu-toggle.active .burger {
+    transform: rotate(90deg);
 }
 
 .text {
@@ -46,55 +65,11 @@ body {
     font-size: 14px;
     font-weight: normal;
     color: #333333;
-    padding: 0 210px; /* Adjusted padding */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     text-decoration: none;
-}
-
-
-/* Media query for screens smaller than 1024px (tablets and below) */
-@media (max-width: 1024px) {
-    .menu-toggle {
-        display: block; /* Display burger menu for mobile */
-    }
-
-    .menu-items {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: rgba(246, 246, 246, 0.744);
-        width: 100%;
-        padding: 10px 0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
-    }
-
-    .menu-toggle.active + .menu-items {
-        display: flex;
-    }
-
-    .menu-toggle.active .burger {
-        transform: rotate(90deg); /* Rotate the burger icon */
-    }
-
-    /* Adjusted padding for mobile */
-    .text {
-        padding: 0 20px;
-    }
-}
-
-/* Desktop View */
-@media (min-width: 1025px) {
-    .menu-toggle {
-        display: none; /* Hide burger menu on desktop */
-    }
-
-    .menu-items {
-        display: flex;
-    }
+    padding: 0; /* Remove padding for full-page menu */
 }
 
 .content {
@@ -162,7 +137,6 @@ body {
     line-height: 1.6;
 }
 
-/* Media query for screens smaller than 768px (tablets and below) */
 @media (max-width: 768px) {
     .textbox {
         padding: 10px; /* Adjust padding for smaller screens */
@@ -177,7 +151,6 @@ body {
     }
 }
 
-/* Media query for screens smaller than 480px (phones) */
 @media (max-width: 480px) {
     .textbox {
         padding: 20px; /* Further reduce padding for smaller screens */

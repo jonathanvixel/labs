@@ -87,7 +87,8 @@ body {
 
     /* Adjusted padding for iPad */
     .text {
-        padding: 0 210px;
+        padding: 0 20px; /* Adjusted padding for better readability */
+        text-overflow: initial; /* Ensure full text is visible */
     }
 }
 

@@ -65,7 +65,7 @@ body {
         display: block;
     }
 
-         .menu-items {
+        .menu-items {
     display: none;
     flex-direction: column;
     position: absolute;
@@ -80,6 +80,7 @@ body {
     transition: top 0.3s, opacity 0.3s; /* Include opacity in transition */
     opacity: 0; /* Initial opacity */
 }
+
 
     
     .menu-items.active {

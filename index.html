@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
   <link rel="icon" href="vixelicon.png" type="image/png">
   <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
   <nav class="navbar">
     <div class="container">
@@ -27,26 +25,18 @@
     </div>
   </nav>
 
-  <div class="content">
-    <div class="full-screen-image" style="background-image: url('newblur.jpg');">
-      <div class="image-text">
-        <h2>Building Tomorrow's Realities Today</h2>
-        <p>Vixel Corp.</p>
-      </div>
+  <!-- Full-screen menu -->
+  <div class="fullscreen-menu" id="fullscreenMenu">
+    <div class="menu-items">
+      <a href="/technology" class="text">Technology</a>
+      <a href="/connections" class="text">Connections</a>
+      <a href="/goals" class="text">Goals</a>
+      <a href="/contact" class="text">Contact</a>
     </div>
-    <div class="spacer"></div> <!-- Added spacer -->
-    <div class="full-screen-image" style="background-image: url('black.jpg');"></div>
-    <div class="textbox-container"> <!-- Created a container for textbox -->
-      <div class="textbox">
-        <h2>Future Technologies</h2>
-        <div class="spacer"></div> <!-- Added spacer -->
+  </div>
 
-        <p>
-          Step into a realm of innovation with Vixel Corp. with groundbreaking technology, where the ordinary is transformed into the extraordinary, and daily routines are redefined for unparalleled ease. Our advanced solutions seamlessly integrate into your life, from intuitive home automation that anticipates your needs to streamlined connectivity that keeps you effortlessly in sync with your surroundings. Imagine waking up to a home that adjusts to your preferences with lights and appliances responding to your commands, simplifying your morning routine with grace and efficiency. With our unwavering commitment to pushing the boundaries of what's possible, we ensure that our products not only meet but exceed your expectations, providing you with the tools to embrace a simpler, smarter lifestyle. </p>
-      </div>
-    </div>
-    <div class="spacer"></div> <!-- Added spacer -->
-    <div class="full-screen-image" style="background-image: url('4k.jpg');"></div>
+  <div class="content">
+    <!-- Content sections -->
   </div>
 
   <footer>
@@ -59,17 +49,24 @@
     document.addEventListener('DOMContentLoaded', function() {
       const toggle = document.getElementById('toggle');
       const menuItems = document.querySelector('.menu-items');
+      const fullscreenMenu = document.getElementById('fullscreenMenu');
 
       toggle.addEventListener('click', function() {
         menuItems.classList.toggle('active');
       });
 
+      // Toggle fullscreen menu
+      toggle.addEventListener('click', function() {
+        fullscreenMenu.classList.toggle('active');
+      });
+
       // Add touch event listener for mobile devices
       toggle.addEventListener('touchstart', function() {
         menuItems.classList.toggle('active');
+        fullscreenMenu.classList.toggle('active');
       });
     });
   </script>
 </body>
-
 </html>
+

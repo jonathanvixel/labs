@@ -37,8 +37,30 @@ body {
 }
 
 .menu-items {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(246, 246, 246, 0.744);
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
+    z-index: 999;
+    text-align: center;
+}
+
+.menu-toggle.active + .menu-items {
     display: flex;
-    gap: 20px; /* Adjust the gap between menu items */
+}
+
+.menu-toggle.active .burger {
+    transform: rotate(90deg);
+}
+
+.menu-items .menu-item {
+    margin: 20px 0;
 }
 
 .text {
@@ -46,7 +68,7 @@ body {
     font-size: 14px;
     font-weight: normal;
     color: #333333;
-    padding: 0 210px; /* Adjusted padding */
+    padding: 0 210px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -67,14 +89,6 @@ body {
 
     .menu-items {
         display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: rgba(246, 246, 246, 0.744);
-        width: 100%;
-        padding: 10px 0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
     }
 
     .menu-toggle.active + .menu-items {
@@ -82,12 +96,15 @@ body {
     }
 
     .menu-toggle.active .burger {
-        transform: rotate(90deg); /* Rotate the burger icon */
+        transform: rotate(90deg);
     }
 
-    /* Adjusted padding for iPad */
     .text {
-        padding: 0 210px;
+        padding: 0;
+    }
+
+    .menu-item {
+        margin: 20px 0;
     }
 }
 
@@ -101,7 +118,6 @@ body {
         display: flex;
     }
 }
-
 
 .content {
     display: flex;
@@ -143,12 +159,12 @@ body {
 }
 
 .textbox {
-    width: 100%; /* Set width to 100% */
-    max-width: 2500px; /* Set a maximum width */
-    margin: 0 auto; /* Center the box horizontally */
+    width: 100%;
+    max-width: 2500px;
+    margin: 0 auto;
     background-color: #ffffff;
-    padding: 230px; /* Reduce padding for smaller screens */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
+    padding: 230px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .textbox h2,
@@ -171,38 +187,37 @@ body {
 /* Media query for screens smaller than 768px (tablets and below) */
 @media (max-width: 768px) {
     .textbox {
-        padding: 10px; /* Adjust padding for smaller screens */
+        padding: 10px;
     }
 
     .textbox h2 {
-        font-size: 22px; /* Adjust heading font size */
+        font-size: 22px;
     }
 
     .textbox p {
-        font-size: 18px; /* Adjust paragraph font size */
+        font-size: 18px;
     }
 }
 
 /* Media query for screens smaller than 480px (phones) */
 @media (max-width: 480px) {
     .textbox {
-        padding: 20px; /* Further reduce padding for smaller screens */
+        padding: 20px;
     }
 
     .textbox h2 {
-        font-size: 20px; /* Further adjust heading font size */
+        font-size: 20px;
     }
 
     .textbox p {
-        font-size: 16px; /* Further adjust paragraph font size */
+        font-size: 16px;
     }
 }
-
 
 footer {
     background-color: rgba(255, 255, 255, 0.9);
     color: #666666;
-    padding: 40px 2%; /* Adjust padding as needed */
+    padding: 40px 2%;
     text-align: center;
     width: 100%;
     position: relative;
@@ -210,9 +225,8 @@ footer {
     z-index: 1;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 15px;
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    box-sizing: border-box;
 }
-
 
 footer .footer-content {
     display: flex;

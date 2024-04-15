@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,36 +8,42 @@
   <link rel="icon" href="vixelicon.png" type="image/png">
   <link rel="stylesheet" href="technology.css">
 </head>
+
 <body>
   <nav class="navbar">
     <div class="container">
-        <a href="/">
-            <img src="vixelicon.png" class="logo" alt="Logo">
-        </a>
-        <div class="menu-toggle" id="toggle">
-            <div class="burger">&#9776;</div> <!-- Burger menu icon -->
-        </div>
-        <div class="menu-items">
-            <a href="/technology" class="text">Technology</a> <!-- Removed .html extension -->
-            <a href="/connections" class="text">Connections</a> <!-- Removed .html extension -->
-            <a href="/goals" class="text">Goals</a> <!-- Removed .html extension -->
-            <a href="/contact" class="text">Contact</a> <!-- Removed .html extension -->
-        </div>
+      <a href="/">
+        <img src="vixelicon.png" class="logo" alt="Logo">
+      </a>
+      <div class="menu-toggle" id="toggle">
+        <div class="burger">&#9776;</div> <!-- Burger menu icon -->
+      </div>
+      <div class="menu-items mobile-menu">
+        <!-- Mobile menu items -->
+        <a href="/technology" class="text">Technology</a>
+        <a href="/connections" class="text">Connections</a>
+        <a href="/goals" class="text">Goals</a>
+        <a href="/contact" class="text">Contact</a>
+      </div>
     </div>
-</nav>
+  </nav>
 
+  <div class="overlay"></div> <!-- Overlay for full-screen menu -->
 
- 
+  <div class="content">
+    <div class="full-screen-image" style="background-image: url('newblur.jpg');">
+      <div class="image-text">
+        <h2>Building Tomorrow's Realities Today</h2>
+        <p>Vixel Corp.</p>
+      </div>
     </div>
     <div class="spacer"></div> <!-- Added spacer -->
-   
+    <div class="full-screen-image" style="background-image: url('black.jpg');"></div>
     <div class="textbox-container"> <!-- Created a container for textbox -->
       <div class="textbox">
         <h2>In Progress</h2>
         <div class="spacer"></div> <!-- Added spacer -->
 
-        
-          
         <p> </p>
         <p></p>
         <p></p>
@@ -44,28 +51,39 @@
 
       </div>
     </div>
-  
+    <div class="spacer"></div> <!-- Added spacer -->
+    <div class="full-screen-image" style="background-image: url('4k.jpg');"></div>
+  </div>
 
   <footer>
     <div class="footer-content">
-      <p>&copy; 2024 Vixel Corp. Labs. All rights reserved. Property of the Vixel Corporation. <span class="separator"> | </span> <a href="/about">About</a></p> <!-- Removed .html extension -->
+      <p>&copy; 2024 Vixel Corp. Labs. All rights reserved. Property of the Vixel Corporation. <span class="separator"> | </span> <a href="/about">About</a></p>
     </div>
   </footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const toggle = document.getElementById('toggle');
-      const menuItems = document.querySelector('.menu-items');
+      const menuItems = document.querySelector('.menu-items.mobile-menu');
+      const overlay = document.querySelector('.overlay');
 
       toggle.addEventListener('click', function() {
         menuItems.classList.toggle('active');
+        overlay.classList.toggle('active');
+      });
+
+      overlay.addEventListener('click', function() {
+        menuItems.classList.remove('active');
+        overlay.classList.remove('active');
       });
 
       // Add touch event listener for mobile devices
       toggle.addEventListener('touchstart', function() {
         menuItems.classList.toggle('active');
+        overlay.classList.toggle('active');
       });
     });
   </script>
 </body>
+
 </html>

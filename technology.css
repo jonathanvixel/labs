@@ -25,6 +25,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
+    max-width: 1200px; /* Limit container width */
+    margin: 0 auto; /* Center container */
 }
 
 .logo {
@@ -38,7 +40,7 @@ body {
 
 .menu-items {
     display: flex;
-    gap: 20px; /* Adjust the gap between menu items */
+    gap: 20px;
 }
 
 .text {
@@ -46,11 +48,11 @@ body {
     font-size: 14px;
     font-weight: normal;
     color: #333333;
-    padding: 0 210px; /* Adjusted padding */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     text-decoration: none;
+    padding: 10px 20px;
 }
 
 /* Burger menu icon */
@@ -58,7 +60,6 @@ body {
     font-size: 24px;
     cursor: pointer;
 }
-
 /* Mobile View */
 @media (max-width: 1024px) {
     .menu-toggle {

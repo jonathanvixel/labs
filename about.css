@@ -65,21 +65,21 @@ body {
         display: block;
     }
 
-        .menu-items {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgba(246, 246, 246, 0.752);
-    width: 100%;
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
-    backdrop-filter: blur(10px); /* Adjust the blur intensity */
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
-    transition: top 0.3s, opacity 0.3s; /* Include opacity in transition */
-    opacity: 0; /* Initial opacity */
-}
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgba(246, 246, 246, 0.633);
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
+        backdrop-filter: blur(10px); /* Adjust the blur intensity */
+        -webkit-backdrop-filter: blur(10px); /* For Safari */
+        transition: top 0.3s, opacity 0.3s; /* Include opacity in transition */
+        opacity: 0; /* Initial opacity */
+    }
 
 
     

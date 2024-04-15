@@ -59,39 +59,6 @@ body {
     cursor: pointer;
 }
 
-/* Fullscreen menu */
-.fullscreen-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* Ensure it's on top */
-}
-
-.fullscreen-menu.active {
-    display: flex;
-}
-
-.fullscreen-menu .menu-items {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-}
-
-.fullscreen-menu .text {
-    color: #ffffff; /* White text color */
-}
-
-.spacer {
-    height: 50px;
-}
-
 /* Mobile View */
 @media (max-width: 1024px) {
     .menu-toggle {

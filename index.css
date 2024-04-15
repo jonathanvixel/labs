@@ -25,8 +25,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px; /* Added max-width */
+    margin: 0 auto; /* Centering the container */
 }
 
 .logo {

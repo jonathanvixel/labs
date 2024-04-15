@@ -25,8 +25,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-    max-width: 1200px; /* Set max-width for the container */
-    margin: 0 auto; /* Center the container horizontally */
+    max-width: 1200px; /* Limit container width */
+    margin: 0 auto; /* Center container */
 }
 
 .logo {
@@ -48,11 +48,11 @@ body {
     font-size: 14px;
     font-weight: normal;
     color: #333333;
-    padding: 0 10px; /* Adjusted padding */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     text-decoration: none;
+    padding: 10px 20px;
 }
 
 /* Burger menu icon */
@@ -71,17 +71,16 @@ body {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: calc(100% + 10px); /* Adjusted top position */
-        left: 5%; /* Adjusted left position */
+        top: 100%;
+        left: 0;
         background-color: rgba(246, 246, 246, 0.633);
-        width: 90%; /* Adjusted width */
+        width: 100%;
         padding: 10px 0;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-        transition: opacity 0.3s, top 0.3s; /* Include top position in transition */
+        transition: top 0.3s, opacity 0.3s;
         opacity: 0;
-        z-index: 1000; /* Ensure the menu is above other content */
     }
 
     .menu-items.active {
@@ -95,7 +94,7 @@ body {
     }
 
     .text {
-        padding: 10px 20px; /* Adjusted padding */
+        padding: 10px 20px;
         text-overflow: initial;
     }
 }
@@ -252,4 +251,5 @@ footer a:hover {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
 }
+
 

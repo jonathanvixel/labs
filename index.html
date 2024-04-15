@@ -63,6 +63,11 @@
       toggle.addEventListener('click', function() {
         menuItems.classList.toggle('active');
       });
+
+      // Add touch event listener for mobile devices
+      toggle.addEventListener('touchstart', function() {
+        menuItems.classList.toggle('active');
+      });
     });
   </script>
 </body>

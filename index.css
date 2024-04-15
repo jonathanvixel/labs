@@ -1,5 +1,5 @@
 body {
-    background-color: #f5f5f5; 
+    background-color: #f5f5f5;
     margin: 0;
     scroll-behavior: smooth;
 }
@@ -28,8 +28,8 @@ body {
 }
 
 .logo {
-    width: 25px;
-    height: auto;
+    width: auto;
+    height: 25px;
 }
 
 .menu-toggle {
@@ -38,7 +38,9 @@ body {
 
 .menu-items {
     display: flex;
-    gap: 20px; /* Adjust the gap between menu items */
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 5%;
 }
 
 .text {
@@ -46,11 +48,11 @@ body {
     font-size: 14px;
     font-weight: normal;
     color: #333333;
-    padding: 0 210px; /* Adjusted padding */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     text-decoration: none;
+    padding: 10px;
 }
 
 /* Burger menu icon */
@@ -75,28 +77,27 @@ body {
         width: 100%;
         padding: 10px 0;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
-        backdrop-filter: blur(10px); /* Adjust the blur intensity */
-        -webkit-backdrop-filter: blur(10px); /* For Safari */
-        transition: top 0.3s, opacity 0.3s; /* Include opacity in transition */
-        opacity: 0; /* Initial opacity */
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transition: top 0.3s, opacity 0.3s;
+        opacity: 0;
     }
+
     .menu-items.active {
         display: flex;
         opacity: 1;
     }
 
     .menu-toggle.active .burger {
-        transform: rotate(90deg); /* Rotate the burger icon */
-        transition: transform 0.3s ease; /* Smooth transition for rotation */
+        transform: rotate(90deg);
+        transition: transform 0.3s ease;
     }
 
-    /* Adjusted padding for better readability */
     .text {
-        padding: 0 20px;
-        text-overflow: initial; /* Ensure full text is visible */
+        padding: 10px 20px;
+        text-overflow: initial;
     }
 }
-
 
 /* Desktop View */
 @media (min-width: 1025px) {
@@ -108,7 +109,6 @@ body {
         display: flex;
     }
 }
-
 
 .content {
     display: flex;
@@ -150,12 +150,12 @@ body {
 }
 
 .textbox {
-    width: 100%; /* Set width to 100% */
-    max-width: 2500px; /* Set a maximum width */
-    margin: 0 auto; /* Center the box horizontally */
+    width: 100%;
+    max-width: 2500px;
+    margin: 0 auto;
     background-color: #ffffff;
-    padding: 230px; /* Reduce padding for smaller screens */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
+    padding: 230px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .textbox h2,
@@ -178,38 +178,37 @@ body {
 /* Media query for screens smaller than 768px (tablets and below) */
 @media (max-width: 768px) {
     .textbox {
-        padding: 10px; /* Adjust padding for smaller screens */
+        padding: 10px;
     }
 
     .textbox h2 {
-        font-size: 22px; /* Adjust heading font size */
+        font-size: 22px;
     }
 
     .textbox p {
-        font-size: 18px; /* Adjust paragraph font size */
+        font-size: 18px;
     }
 }
 
 /* Media query for screens smaller than 480px (phones) */
 @media (max-width: 480px) {
     .textbox {
-        padding: 20px; /* Further reduce padding for smaller screens */
+        padding: 20px;
     }
 
     .textbox h2 {
-        font-size: 20px; /* Further adjust heading font size */
+        font-size: 20px;
     }
 
     .textbox p {
-        font-size: 16px; /* Further adjust paragraph font size */
+        font-size: 16px;
     }
 }
-
 
 footer {
     background-color: rgba(255, 255, 255, 0.9);
     color: #666666;
-    padding: 40px 2%; /* Adjust padding as needed */
+    padding: 40px 2%;
     text-align: center;
     width: 100%;
     position: relative;
@@ -217,9 +216,8 @@ footer {
     z-index: 1;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     font-size: 15px;
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    box-sizing: border-box;
 }
-
 
 footer .footer-content {
     display: flex;
@@ -250,6 +248,6 @@ footer a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-    z-index: 999; /* Ensure it's above everything else */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
 }

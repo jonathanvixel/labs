@@ -13,8 +13,8 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
     opacity: 1;
     transition: top 0.3s;
     box-sizing: border-box;

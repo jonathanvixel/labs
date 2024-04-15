@@ -24,12 +24,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Ensure full width */
+    padding: 0 5%;
+    max-width: 1200px; /* Limit container width */
+    margin: 0 auto; /* Center container */
 }
 
 .logo {
-    width: 80px; /* Adjusted width for the logo */
-    height: auto; /* Maintain aspect ratio */
+    width: 25px;
+    height: auto;
 }
 
 .menu-toggle {
@@ -50,7 +52,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     text-decoration: none;
-    padding: 10px 20px; /* Adjusted padding */
+    padding: 10px 20px;
 }
 
 /* Burger menu icon */

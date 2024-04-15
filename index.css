@@ -75,6 +75,7 @@ body {
         width: 100%;
         padding: 10px 0;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
+        backdrop-filter: blur(10px); /* Apply blurry background effect */
     }
 
     .menu-items.active {
@@ -85,12 +86,13 @@ body {
         transform: rotate(90deg); /* Rotate the burger icon */
     }
 
-    /* Adjusted padding for iPad */
+    /* Adjusted padding for better readability */
     .text {
-        padding: 0 20px; /* Adjusted padding for better readability */
+        padding: 0 20px;
         text-overflow: initial; /* Ensure full text is visible */
     }
 }
+
 /* Desktop View */
 @media (min-width: 1025px) {
     .menu-toggle {

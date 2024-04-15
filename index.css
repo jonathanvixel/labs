@@ -75,15 +75,19 @@ body {
         width: 100%;
         padding: 10px 0;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
-        backdrop-filter: blur(10px); /* Apply blurry background effect */
+        backdrop-filter: blur(5px); /* Apply blurry background effect */
+        transition: opacity 0.3s ease;
+        opacity: 0;
     }
 
     .menu-items.active {
         display: flex;
+        opacity: 1;
     }
 
     .menu-toggle.active .burger {
         transform: rotate(90deg); /* Rotate the burger icon */
+        transition: transform 0.3s ease; /* Smooth transition for rotation */
     }
 
     /* Adjusted padding for better readability */
@@ -92,6 +96,7 @@ body {
         text-overflow: initial; /* Ensure full text is visible */
     }
 }
+
 
 /* Desktop View */
 @media (min-width: 1025px) {

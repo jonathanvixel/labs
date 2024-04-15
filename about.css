@@ -75,11 +75,12 @@ body {
         width: 100%;
         padding: 10px 0;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
-        backdrop-filter: blur(15px); /* Apply blurry background effect */
-        transition: opacity 0.3s ease;
+        backdrop-filter: blur(50px);
+        -webkit-backdrop-filter: blur(50px);
+        opacity: 1;
+        transition: top 0.3s;
         opacity: 0;
     }
-
     .menu-items.active {
         display: flex;
         opacity: 1;

@@ -65,13 +65,13 @@ body {
         display: block;
     }
 
-       .menu-items {
+          .menu-items {
         display: none;
         flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: rgba(246, 246, 246, 0.906);
+        background-color: rgba(246, 246, 246, 0.752);
         width: 100%;
         padding: 10px 0;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.040);
@@ -81,6 +81,7 @@ body {
         transition: top 0.3s;
         opacity: 0;
     }
+    
     .menu-items.active {
         display: flex;
         opacity: 1;
